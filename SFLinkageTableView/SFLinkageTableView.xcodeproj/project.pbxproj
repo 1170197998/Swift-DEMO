@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A2C91931D41FB46004303B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C91921D41FB46004303B9 /* AppDelegate.swift */; };
+		9A2C91951D41FB46004303B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C91941D41FB46004303B9 /* ViewController.swift */; };
+		9A2C91981D41FB46004303B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C91961D41FB46004303B9 /* Main.storyboard */; };
+		9A2C919A1D41FB46004303B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C91991D41FB46004303B9 /* Assets.xcassets */; };
+		9A2C919D1D41FB46004303B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C919B1D41FB46004303B9 /* LaunchScreen.storyboard */; };
+		9A2C91A81D41FB47004303B9 /* SFLinkageTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C91A71D41FB47004303B9 /* SFLinkageTableViewTests.swift */; };
+		9A2C91B31D41FB47004303B9 /* SFLinkageTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C91B21D41FB47004303B9 /* SFLinkageTableViewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A2C91A41D41FB47004303B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A2C91871D41FB46004303B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A2C918E1D41FB46004303B9;
+			remoteInfo = SFLinkageTableView;
+		};
+		9A2C91AF1D41FB47004303B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A2C91871D41FB46004303B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A2C918E1D41FB46004303B9;
+			remoteInfo = SFLinkageTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A2C918F1D41FB46004303B9 /* SFLinkageTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFLinkageTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2C91921D41FB46004303B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A2C91941D41FB46004303B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A2C91971D41FB46004303B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A2C91991D41FB46004303B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A2C919C1D41FB46004303B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A2C919E1D41FB47004303B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A2C91A31D41FB47004303B9 /* SFLinkageTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFLinkageTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2C91A71D41FB47004303B9 /* SFLinkageTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFLinkageTableViewTests.swift; sourceTree = "<group>"; };
+		9A2C91A91D41FB47004303B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A2C91AE1D41FB47004303B9 /* SFLinkageTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFLinkageTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2C91B21D41FB47004303B9 /* SFLinkageTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFLinkageTableViewUITests.swift; sourceTree = "<group>"; };
+		9A2C91B41D41FB47004303B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A2C918C1D41FB46004303B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C91A01D41FB47004303B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C91AB1D41FB47004303B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A2C91861D41FB46004303B9 = {
+			isa = PBXGroup;
+			children = (
+				9A2C91911D41FB46004303B9 /* SFLinkageTableView */,
+				9A2C91A61D41FB47004303B9 /* SFLinkageTableViewTests */,
+				9A2C91B11D41FB47004303B9 /* SFLinkageTableViewUITests */,
+				9A2C91901D41FB46004303B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A2C91901D41FB46004303B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C918F1D41FB46004303B9 /* SFLinkageTableView.app */,
+				9A2C91A31D41FB47004303B9 /* SFLinkageTableViewTests.xctest */,
+				9A2C91AE1D41FB47004303B9 /* SFLinkageTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A2C91911D41FB46004303B9 /* SFLinkageTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C91921D41FB46004303B9 /* AppDelegate.swift */,
+				9A2C91941D41FB46004303B9 /* ViewController.swift */,
+				9A2C91961D41FB46004303B9 /* Main.storyboard */,
+				9A2C91991D41FB46004303B9 /* Assets.xcassets */,
+				9A2C919B1D41FB46004303B9 /* LaunchScreen.storyboard */,
+				9A2C919E1D41FB47004303B9 /* Info.plist */,
+			);
+			path = SFLinkageTableView;
+			sourceTree = "<group>";
+		};
+		9A2C91A61D41FB47004303B9 /* SFLinkageTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C91A71D41FB47004303B9 /* SFLinkageTableViewTests.swift */,
+				9A2C91A91D41FB47004303B9 /* Info.plist */,
+			);
+			path = SFLinkageTableViewTests;
+			sourceTree = "<group>";
+		};
+		9A2C91B11D41FB47004303B9 /* SFLinkageTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C91B21D41FB47004303B9 /* SFLinkageTableViewUITests.swift */,
+				9A2C91B41D41FB47004303B9 /* Info.plist */,
+			);
+			path = SFLinkageTableViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A2C918E1D41FB46004303B9 /* SFLinkageTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2C91B71D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableView" */;
+			buildPhases = (
+				9A2C918B1D41FB46004303B9 /* Sources */,
+				9A2C918C1D41FB46004303B9 /* Frameworks */,
+				9A2C918D1D41FB46004303B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFLinkageTableView;
+			productName = SFLinkageTableView;
+			productReference = 9A2C918F1D41FB46004303B9 /* SFLinkageTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A2C91A21D41FB47004303B9 /* SFLinkageTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2C91BA1D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableViewTests" */;
+			buildPhases = (
+				9A2C919F1D41FB47004303B9 /* Sources */,
+				9A2C91A01D41FB47004303B9 /* Frameworks */,
+				9A2C91A11D41FB47004303B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A2C91A51D41FB47004303B9 /* PBXTargetDependency */,
+			);
+			name = SFLinkageTableViewTests;
+			productName = SFLinkageTableViewTests;
+			productReference = 9A2C91A31D41FB47004303B9 /* SFLinkageTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A2C91AD1D41FB47004303B9 /* SFLinkageTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2C91BD1D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableViewUITests" */;
+			buildPhases = (
+				9A2C91AA1D41FB47004303B9 /* Sources */,
+				9A2C91AB1D41FB47004303B9 /* Frameworks */,
+				9A2C91AC1D41FB47004303B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A2C91B01D41FB47004303B9 /* PBXTargetDependency */,
+			);
+			name = SFLinkageTableViewUITests;
+			productName = SFLinkageTableViewUITests;
+			productReference = 9A2C91AE1D41FB47004303B9 /* SFLinkageTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A2C91871D41FB46004303B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Cocav;
+				TargetAttributes = {
+					9A2C918E1D41FB46004303B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9A2C91A21D41FB47004303B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9A2C918E1D41FB46004303B9;
+					};
+					9A2C91AD1D41FB47004303B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9A2C918E1D41FB46004303B9;
+					};
+				};
+			};
+			buildConfigurationList = 9A2C918A1D41FB46004303B9 /* Build configuration list for PBXProject "SFLinkageTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A2C91861D41FB46004303B9;
+			productRefGroup = 9A2C91901D41FB46004303B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A2C918E1D41FB46004303B9 /* SFLinkageTableView */,
+				9A2C91A21D41FB47004303B9 /* SFLinkageTableViewTests */,
+				9A2C91AD1D41FB47004303B9 /* SFLinkageTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A2C918D1D41FB46004303B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C919D1D41FB46004303B9 /* LaunchScreen.storyboard in Resources */,
+				9A2C919A1D41FB46004303B9 /* Assets.xcassets in Resources */,
+				9A2C91981D41FB46004303B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C91A11D41FB47004303B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C91AC1D41FB47004303B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A2C918B1D41FB46004303B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C91951D41FB46004303B9 /* ViewController.swift in Sources */,
+				9A2C91931D41FB46004303B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C919F1D41FB47004303B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C91A81D41FB47004303B9 /* SFLinkageTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A2C91AA1D41FB47004303B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C91B31D41FB47004303B9 /* SFLinkageTableViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A2C91A51D41FB47004303B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A2C918E1D41FB46004303B9 /* SFLinkageTableView */;
+			targetProxy = 9A2C91A41D41FB47004303B9 /* PBXContainerItemProxy */;
+		};
+		9A2C91B01D41FB47004303B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A2C918E1D41FB46004303B9 /* SFLinkageTableView */;
+			targetProxy = 9A2C91AF1D41FB47004303B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A2C91961D41FB46004303B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A2C91971D41FB46004303B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A2C919B1D41FB46004303B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A2C919C1D41FB46004303B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A2C91B51D41FB47004303B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A2C91B61D41FB47004303B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A2C91B81D41FB47004303B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SFLinkageTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A2C91B91D41FB47004303B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SFLinkageTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A2C91BB1D41FB47004303B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFLinkageTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFLinkageTableView.app/SFLinkageTableView";
+			};
+			name = Debug;
+		};
+		9A2C91BC1D41FB47004303B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SFLinkageTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SFLinkageTableView.app/SFLinkageTableView";
+			};
+			name = Release;
+		};
+		9A2C91BE1D41FB47004303B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SFLinkageTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFLinkageTableView;
+			};
+			name = Debug;
+		};
+		9A2C91BF1D41FB47004303B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SFLinkageTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocav.SFLinkageTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SFLinkageTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A2C918A1D41FB46004303B9 /* Build configuration list for PBXProject "SFLinkageTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C91B51D41FB47004303B9 /* Debug */,
+				9A2C91B61D41FB47004303B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A2C91B71D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C91B81D41FB47004303B9 /* Debug */,
+				9A2C91B91D41FB47004303B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A2C91BA1D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C91BB1D41FB47004303B9 /* Debug */,
+				9A2C91BC1D41FB47004303B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A2C91BD1D41FB47004303B9 /* Build configuration list for PBXNativeTarget "SFLinkageTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C91BE1D41FB47004303B9 /* Debug */,
+				9A2C91BF1D41FB47004303B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A2C91871D41FB46004303B9 /* Project object */;
+}
