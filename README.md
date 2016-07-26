@@ -7,6 +7,11 @@
 ##transitioningAnimation:
 ![效果图](http://img.blog.csdn.net/20160427115337115)
 
+# 
+
+##TableViewSlideMultiButton,QQ聊天列表页
+##![效果图](http://g.recordit.co/oDJjUKuiD8.gif)
+
 ##博客地址:http://blog.csdn.net/feng2qing
 
 
