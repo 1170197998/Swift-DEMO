@@ -9,14 +9,14 @@
 import UIKit
 
 class SFTextField: UITextField {
-
+    
     var password: String?
     var beginEditingObsever: AnyObject?
     var endEditingObserver: AnyObject?
     
     override var secureTextEntry: Bool {
-
-        willSet {
+        
+        didSet {
             
             let isFirstResponder = self.isFirstResponder()
             resignFirstResponder()
@@ -25,7 +25,29 @@ class SFTextField: UITextField {
             }
         }
     }
-
+    
+    /**
+     
+     private var _secureTextEntry = false
+     override var secureTextEntry: Bool {
+     
+     get {
+     return _secureTextEntry
+     }
+     
+     set {
+     
+     let isFirstResponder = self.isFirstResponder()
+     resignFirstResponder()
+     self._secureTextEntry = newValue
+     if isFirstResponder {
+     becomeFirstResponder()
+     }
+     }
+     }
+     
+     */
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
