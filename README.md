@@ -12,6 +12,11 @@
 ##TableViewSlideMultiButton,QQ聊天列表页
 ##![效果图](http://g.recordit.co/oDJjUKuiD8.gif)
 
+# 
+
+##SFTextField:
+##![Mou icon](http://g.recordit.co/G9tZ942Z3Z.gif)
+
 ##博客地址:http://blog.csdn.net/feng2qing
 
 
