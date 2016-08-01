@@ -17,6 +17,11 @@
 ##SFTextField:
 ##![Mou icon](http://g.recordit.co/G9tZ942Z3Z.gif)
 
+# 
+
+##FoldTableView,类似QQ课折叠可展开的效果
+##![效果图](http://g.recordit.co/MJhL9Lv71j.gif)
+
 ##博客地址:http://blog.csdn.net/feng2qing
 
 

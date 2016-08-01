@@ -39,6 +39,8 @@ class HeaderView: UITableViewHeaderFooterView {
         let button = UIButton.init(frame: CGRect(x: 0, y: 0, width: w, height: 44))
         contentView.addSubview(button)
         button.addTarget(self, action: #selector(clickHeader(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.contentView.backgroundColor = UIColor.greenColor()
     }
     
     func clickHeader(sender: UIButton) {
