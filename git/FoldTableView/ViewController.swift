@@ -16,7 +16,7 @@ class ViewController: UIViewController {
             self.dataSource = models
         }
         view.addSubview(tableView)
-        tableView.frame = UIScreen.mainScreen().bounds
+        tableView.frame = UIScreen.main.bounds
     }
     
 /// 为了减轻控制器负担,把请求数据放到了SectionModel模型中
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 //    }()
     
     /// 懒加载
-    private lazy var dataSource: [SectionModel]? = nil
+    fileprivate lazy var dataSource: [SectionModel]? = nil
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
@@ -52,44 +52,44 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource!.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return (dataSource![section].isExpanded != false) ? dataSource![section].cellModels.count : 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("id") as? TableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "id") as? TableViewCell
         if cell == nil {
-            cell = TableViewCell.init(style: UITableViewCellStyle.Value1, reuseIdentifier: "id")
+            cell = TableViewCell.init(style: UITableViewCellStyle.value1, reuseIdentifier: "id")
         }
         
         cell?.cellModel = dataSource![indexPath.section].cellModels[indexPath.row]
         return cell!
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        var headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("id") as? HeaderView
+        var headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "id") as? HeaderView
         if headerView == nil {
             headerView = HeaderView.init(reuseIdentifier: "id")
         }
         headerView?.sectionModel = dataSource![section]
         headerView!.expandCallBack = {
             (isExpanded: Bool) -> Void in
-            tableView.reloadSections(NSIndexSet.init(index: section), withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.reloadSections(NSIndexSet.init(index: section) as IndexSet, with: UITableViewRowAnimation.fade)
         }
         return headerView!
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
 }

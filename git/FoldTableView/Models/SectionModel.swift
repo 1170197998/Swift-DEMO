@@ -14,7 +14,7 @@ class SectionModel: NSObject {
     var isExpanded: Bool? = false
     var cellModels: [CellModel] = []
     
-    class func loadData(finish: (models: [SectionModel]?) -> ()) {
+    class func loadData(finish: ([SectionModel]) -> ()) {
         
         var array = [SectionModel]()
         for i in 0..<20 {
@@ -31,6 +31,6 @@ class SectionModel: NSObject {
             sectionModel.cellModels = cellModels
             array.append(sectionModel)
         }
-        finish(models: array)
+        finish(array)
     }
 }
