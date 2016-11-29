@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet var switcher: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        switcher.addTarget(self, action: #selector(ViewController.clickSwitch(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        switcher.addTarget(self, action: #selector(ViewController.clickSwitch(_:)), for: UIControlEvents.valueChanged)
     }
     
-    @objc private func clickSwitch(sender: UISwitch) {
-        textField.secureTextEntry = sender.on
+    @objc fileprivate func clickSwitch(_ sender: UISwitch) {
+        textField.isSecureTextEntry = sender.isOn
     }
 
     override func didReceiveMemoryWarning() {

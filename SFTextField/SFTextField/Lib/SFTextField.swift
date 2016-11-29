@@ -14,11 +14,11 @@ class SFTextField: UITextField {
     var beginEditingObsever: AnyObject?
     var endEditingObserver: AnyObject?
     
-    override var secureTextEntry: Bool {
+    override var isSecureTextEntry: Bool {
         
         didSet {
             
-            let isFirstResponder = self.isFirstResponder()
+            let isFirstResponder = self.isFirstResponder
             resignFirstResponder()
             if isFirstResponder {
                 becomeFirstResponder()
@@ -53,18 +53,18 @@ class SFTextField: UITextField {
         setup()
     }
     
-    private func setup() {
+    fileprivate func setup() {
         
         password = ""
         weak var weakSelf = self
-        beginEditingObsever = NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidBeginEditingNotification, object: nil, queue: nil, usingBlock: { (note) in
-            if (weakSelf! == note.object as! UITextField) && (weakSelf?.secureTextEntry)!{
+        beginEditingObsever = NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidBeginEditing, object: nil, queue: nil, using: { (note) in
+            if (weakSelf! == note.object as! UITextField) && (weakSelf?.isSecureTextEntry)!{
                 weakSelf!.text = ""
                 weakSelf!.insertText(self.password!)
             }
         })
         
-        endEditingObserver = NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidEndEditingNotification, object: nil, queue: nil, usingBlock: { (note) in
+        endEditingObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidEndEditing, object: nil, queue: nil, using: { (note) in
             if weakSelf == note.object as? UITextField {
                 weakSelf?.password = weakSelf?.text
             }
@@ -72,8 +72,8 @@ class SFTextField: UITextField {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self.beginEditingObsever!)
-        NSNotificationCenter.defaultCenter().removeObserver(self.endEditingObserver!)
+        NotificationCenter.default.removeObserver(self.beginEditingObsever!)
+        NotificationCenter.default.removeObserver(self.endEditingObserver!)
     }
     
     required init?(coder aDecoder: NSCoder) {
