@@ -10,49 +10,50 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    var array = []
+    var array = [Any]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         let titleButton = TitleButton()
-        titleButton.setTitle("锋少 ", forState: UIControlState.Normal)
-        titleButton.addTarget(self, action: #selector(ViewController.clickButton), forControlEvents: UIControlEvents.TouchUpInside)
+        titleButton.setTitle("点我 ", for: UIControlState())
+        titleButton.addTarget(self, action: #selector(ViewController.clickButton), for: UIControlEvents.touchUpInside)
         navigationItem.titleView = titleButton
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.change), name: PopoverAnimatorWillShow, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.change), name: PopoverAnimatorWillDismiss, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.dataSource(_:)), name: dataSourceChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.change), name: NSNotification.Name(rawValue: PopoverAnimatorWillShow), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.change), name: NSNotification.Name(rawValue: PopoverAnimatorWillDismiss), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.dataSource(_:)), name: NSNotification.Name(rawValue: dataSourceChange), object: nil)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    func dataSource(non: NSNotification) {
+    func dataSource(_ non: Notification) {
         array = [non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!]
 //        print(array)
 //        print(array.count)
         tableView.reloadData()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cells")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cells")
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cells")
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cells")
         }
         if array.count != 0 {
-            cell?.textLabel?.text = String(array.objectAtIndex(indexPath.row))
+            
+            cell?.textLabel?.text = String(describing: array[indexPath.row])
         }
 
         return cell!
@@ -61,7 +62,7 @@ class ViewController: UITableViewController {
     func change() {
         
         let titleButton = navigationItem.titleView as! TitleButton
-        titleButton.selected = !titleButton.selected
+        titleButton.isSelected = !titleButton.isSelected
     }
     
     func clickButton() {
@@ -69,16 +70,16 @@ class ViewController: UITableViewController {
         //弹出菜单
         let viewController = PopoverTableViewController()
         viewController.transitioningDelegate = popoverAnimator
-        viewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-        presentViewController(viewController, animated: true, completion: nil)
+        viewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        present(viewController, animated: true, completion: nil)
     }
     
     //懒加载转场
-    private lazy var popoverAnimator: PopoverAnimator = {
+    fileprivate lazy var popoverAnimator: PopoverAnimator = {
         
         let pa = PopoverAnimator()
         //在这里设置弹出菜单的位置和大小
-        pa.presentFrame = CGRectMake(UIScreen.mainScreen().bounds.size.width / 2 - 100, 56, 200, 350)
+        pa.presentFrame = CGRect(x: UIScreen.main.bounds.size.width / 2 - 100, y: 56, width: 200, height: 350)
         return pa
     }()
 }

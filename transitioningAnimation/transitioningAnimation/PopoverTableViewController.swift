@@ -15,7 +15,7 @@ class PopoverTableViewController: UITableViewController {
 
     let PopoverAnimatorWillShow = "PopoverAnimatorWillShow"
 
-    var arrayList = []
+    var arrayList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,29 +24,29 @@ class PopoverTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arrayList.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier:"cell")
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier:"cell")
         }
-        cell?.textLabel?.text = (arrayList.objectAtIndex(indexPath.row) as! String)
+        cell?.textLabel?.text = arrayList[indexPath.row]
         return cell!
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        NSNotificationCenter.defaultCenter().postNotificationName(dataSourceChange, object: nil, userInfo: ["key":indexPath.row])
-        dismissViewControllerAnimated(true, completion: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: dataSourceChange), object: nil, userInfo: ["key":indexPath.row])
+        dismiss(animated: true, completion: nil)
     }
 
     
