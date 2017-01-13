@@ -1,3 +1,5 @@
+##博客地址:http://blog.csdn.net/feng2qing
+
 #DEMO截图,会一直更新...
 ##SFLinkageTableView:
 ##![Mou icon](http://g.recordit.co/XEfnC2Bp62.gif)
@@ -22,6 +24,7 @@
 ##FoldTableView,类似QQ课折叠可展开的效果
 ##![效果图](http://g.recordit.co/MJhL9Lv71j.gif)
 
-##博客地址:http://blog.csdn.net/feng2qing
+# 
 
-
+##TableViewVew搜索高亮显示
+##![效果图](http://g.recordit.co/Fq3m5PI4wE.gif)
