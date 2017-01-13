@@ -12,7 +12,7 @@ import UIKit
 class ViewController: UIViewController {
 
     fileprivate var dataSource: NSMutableArray?
-    fileprivate var dataResult: Array<String>?
+    fileprivate var dataResult: Array<String> = []
     fileprivate var searchController: UISearchController = UISearchController()
     fileprivate var tableView: UITableView?
     
@@ -43,7 +43,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive {
-            return self.dataResult?.count ?? 0
+            return self.dataResult.count
         }
         return self.dataSource!.count
     }
@@ -52,13 +52,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: identifer, for: indexPath)
         
         if searchController.isActive {
-            let originResult = dataResult?[indexPath.row]
-            let range = (originResult?.range(of: searchController.searchBar.text!) as? NSRange) ?? NSMakeRange(0, 0)
-            let attributeString = NSMutableAttributedString(string: originResult ?? "")
+            let originResult = dataResult[indexPath.row] as NSString
+            let range = originResult.range(of: searchController.searchBar.text!)
+            let attributeString = NSMutableAttributedString(string: originResult as String )
             attributeString.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 18), range: range)
             attributeString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: range)
             cell.textLabel?.attributedText = attributeString
-            cell.textLabel?.text = dataResult?[indexPath.row]
+            cell.textLabel?.text = dataResult[indexPath.row]
         } else {
             cell.textLabel?.text = dataSource?.object(at: indexPath.row) as! String?
         }
@@ -73,7 +73,7 @@ extension ViewController: UISearchResultsUpdating
         dataResult = Array()
         let string = searchController.searchBar.text ?? ""
         let predicate = NSPredicate.init(format: "SELF CONTAINS [c] %@",string)
-        dataResult = dataSource?.filtered(using: predicate) as! Array<String>?
+        dataResult = (dataSource?.filtered(using: predicate) as! Array<String>?)!
         tableView?.reloadData()
     }
 }
