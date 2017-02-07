@@ -62,7 +62,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
         } else {
             cell.textLabel?.text = dataSource?.object(at: indexPath.row) as! String?
         }
-        
         return cell
     }
 }
