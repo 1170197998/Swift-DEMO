@@ -10,6 +10,5 @@
 import UIKit
 
 class CellModel: NSObject {
-
     var cellTitle: String? = nil
 }
