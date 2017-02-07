@@ -45,7 +45,6 @@ class SFTextField: UITextField {
      }
      }
      }
-     
      */
     
     override init(frame: CGRect) {
