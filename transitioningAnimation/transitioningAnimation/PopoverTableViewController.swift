@@ -12,9 +12,9 @@ import UIKit
 let dataSourceChange = "dataSourceChange"
 
 class PopoverTableViewController: UITableViewController {
-
+    
     let PopoverAnimatorWillShow = "PopoverAnimatorWillShow"
-
+    
     var arrayList = [String]()
     
     override func viewDidLoad() {
@@ -22,12 +22,12 @@ class PopoverTableViewController: UITableViewController {
         
         arrayList = ["1","2","3","4","5","6","7"]
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arrayList.count
@@ -48,7 +48,6 @@ class PopoverTableViewController: UITableViewController {
         NotificationCenter.default.post(name: Notification.Name(rawValue: dataSourceChange), object: nil, userInfo: ["key":indexPath.row])
         dismiss(animated: true, completion: nil)
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
