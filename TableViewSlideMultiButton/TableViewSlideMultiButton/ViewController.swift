@@ -70,13 +70,11 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.none)
         }
         deleteAction.backgroundColor = UIColor.red
-        
         let moreAction = UITableViewRowAction.init(style: UITableViewRowActionStyle.normal, title: "更多") { (action, indexPath) in
             print("点击了更多")
             tableView.reloadData()
         }
         moreAction.backgroundColor = UIColor.orange
-
         let topAction = UITableViewRowAction.init(style: UITableViewRowActionStyle.normal, title: "置顶") { (action, indexPath) in
             print("点击了置顶")
             self.dataSource.insert(self.dataSource[indexPath.row], at: 0)
