@@ -28,3 +28,8 @@
 
 ##TableViewVew搜索高亮显示
 ##![效果图](http://g.recordit.co/Fq3m5PI4wE.gif)
+
+# 
+
+##Touch ID指纹解锁
+##![效果图](http://g.recordit.co/zkisGNY6Tz.gif)
