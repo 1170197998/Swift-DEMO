@@ -147,9 +147,8 @@ extension ScanCodeController:AVCaptureMetadataOutputObjectsDelegate {
         if metadataObjects.count > 0 {
             session.stopRunning()
             let object = metadataObjects[0]
-            guard let url = URL(string: (object as AnyObject).stringValue) else {
-                return
-            }
+            let string: String = (object as AnyObject).stringValue
+            if let url = URL(string: string) {
             if UIApplication.shared.canOpenURL(url) {
                 _ = self.navigationController?.popViewController(animated: true)
                 if #available(iOS 10.0, *) {
@@ -157,9 +156,20 @@ extension ScanCodeController:AVCaptureMetadataOutputObjectsDelegate {
                 } else {
                     UIApplication.shared.openURL(url)
                 }
-                print("扫描成功")
+                //去打开地址链接
             } else {
-                print("扫描失败")
+                //获取非链接结果
+                let alertViewController = UIAlertController(title: "扫描结果", message: (object as AnyObject).stringValue, preferredStyle: .alert)
+                let actionCancel = UIAlertAction(title: "退出", style: .cancel, handler: { (action) in
+                    _ = self.navigationController?.popViewController(animated: true)
+                })
+                let actinSure = UIAlertAction(title: "再次扫描", style: .default, handler: { (action) in
+                    self.session.startRunning()
+                })
+                alertViewController.addAction(actionCancel)
+                alertViewController.addAction(actinSure)
+                self.present(alertViewController, animated: true, completion: nil)
+            }
             }
         }
     }
