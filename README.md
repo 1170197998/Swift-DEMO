@@ -38,3 +38,8 @@
 
 ##AlipayScanQRCode 仿支付宝二维码扫描效果
 ##![效果图](http://g.recordit.co/vVSYycCDMd.gif)
+
+# 
+
+##Dial Swift3.0拨打电话,获取通话状态(接通,挂断...)
+##![效果图](http://g.recordit.co/ouSVUY3RhK.gif)
