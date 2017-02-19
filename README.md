@@ -7,7 +7,7 @@
 # 
 
 ##transitioningAnimation:
-![效果图](http://img.blog.csdn.net/20160427115337115)
+![效果图](http://g.recordit.co/UM6C9O2pfb.gif)
 
 # 
 
