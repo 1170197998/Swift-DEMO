@@ -29,12 +29,12 @@
                                     <constraint firstAttribute="width" constant="30" id="AS4-z0-yOn"/>
                                     <constraint firstAttribute="height" constant="30" id="n8I-rQ-GE5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nb-ef-y9G">
-                                <rect key="frame" x="118" y="428" width="20" height="30"/>
+                                <rect key="frame" x="118" y="429" width="20" height="30"/>
                                 <color key="backgroundColor" red="0.32795145615168797" green="0.38869511593788664" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bev-bl-pSM"/>
@@ -51,12 +51,12 @@
                                     <constraint firstAttribute="height" constant="30" id="A3P-Qr-tXF"/>
                                     <constraint firstAttribute="width" constant="30" id="oBh-II-EDR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUc-gs-i9T">
-                                <rect key="frame" x="184" y="428" width="10" height="30"/>
+                                <rect key="frame" x="184" y="429" width="10" height="30"/>
                                 <color key="backgroundColor" red="0.25030891060302618" green="0.43910545747116281" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="FiT-sd-7fA"/>
@@ -73,12 +73,12 @@
                                     <constraint firstAttribute="width" constant="30" id="8nO-HC-g8E"/>
                                     <constraint firstAttribute="height" constant="30" id="uIp-3n-Jml"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6L-H2-e4I">
-                                <rect key="frame" x="240" y="428" width="10" height="30"/>
+                                <rect key="frame" x="240" y="429" width="10" height="30"/>
                                 <color key="backgroundColor" red="0.255286280836168" green="0.46405334803626774" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U3L-0Z-FaG"/>
@@ -95,7 +95,7 @@
                                     <constraint firstAttribute="height" constant="30" id="T8s-8B-qqC"/>
                                     <constraint firstAttribute="width" constant="30" id="fa9-3L-9I2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -108,12 +108,12 @@
                                     <!--2017-02-20 08:35:58 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-lj-ZYc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="滑动选择活动日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-lj-ZYc">
                                 <rect key="frame" x="36" y="36" width="303" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.68989234438069613" green="0.99782403393135577" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" red="0.51730079219557834" green="1" blue="0.1139750214172075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odG-vY-Psd">
@@ -122,7 +122,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="xkj-0r-W4c"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="点击计算活动剩余时间">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="calculateTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="orp-SZ-r8z"/>
                                 </connections>
@@ -164,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="293.70314842578711"/>
+            <point key="canvasLocation" x="-153" y="116"/>
         </scene>
     </scenes>
 </document>

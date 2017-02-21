@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var hour: UILabel!
@@ -27,78 +27,81 @@ class ViewController: UIViewController {
     }
     
     @objc fileprivate func dateChange()->() {
-        print(datePicker.date)
-        
-        let endDate = datePicker.date
-        let startDate = Date()
-        let timeInterval:TimeInterval = endDate.timeIntervalSince(startDate)
-        
-        if timer == nil {
-            var timeout = timeInterval
-            let queue = DispatchQueue.global()
-            timer = DispatchSource.makeTimerSource(flags: [], queue: queue)
-            timer = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: UInt(0)), queue: queue)
-
-            /*
-             _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
-             dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
-
-             */
-            
-            timer?.scheduleRepeating(deadline: <#T##DispatchTime#>, interval: <#T##DispatchTimeInterval#>, leeway: <#T##DispatchTimeInterval#>)
-             _ = timer?.scheduleRepeating(wallDeadline: DispatchWallTime.now(), interval: 1.0 * Double(NSEC_PER_SEC), leeway: DispatchTimeInterval(0))
-            
-            _ = DispatchSource.makeTimerSource().setEventHandler(handler: {
-                if timeout <= 0 {
-                    self.timer?.cancel()
-                    self.timer = nil
-                    DispatchQueue.main.async {
-                        self.day.text = "00"
-                        self.hour.text = "00"
-                        self.minute.text = "00"
-                        self.second.text = "00"
-                    }
-                } else {
-                    let days = timeout / (3600 * 24)
-                    if days == 0 {
-                        self.day.text = ""
-                    }
-                    let hours = (timeout - days * 24 * 3600) / 3600
-                    let minutes = (timeout - days * 24 * 3600 - hours * 3600) / 60
-                    let seconds = (timeout - days * 24 * 3600 - hours * 3600 - minutes * 60)
-                    DispatchQueue.main.async {
-                        if days == 0 {
-                            self.day.text = "0"
-                        } else {
-                            self.day.text = "\(days)"
-                        }
-                        if hours < 10 {
-                            self.hour.text = "0" + "\(hours)"
-                        } else {
-                            self.hour.text = "\(hours)"
-                        }
-                        if minutes < 10 {
-                            self.minute.text = "0" + "\(minutes)"
-                        } else {
-                            self.minute.text = "\(minutes)"
-                        }
-                        if seconds < 10 {
-                            self.second.text = "0" + "\(seconds)"
-                        } else {
-                            self.second.text = "\(seconds)"
-                        }
-
-                    }
-                    timeout -= 1
-                }
-            })
-            timer?.resume()
-        }
+        //datePicker选择完毕
     }
     
     @IBAction func calculateTime(_ sender: Any) {
         
+        print(datePicker.date)
+        timer = nil
+        //截止日期
+        let endDate = datePicker.date
+        //开始日期
+        let startDate = Date()
+        //时间间隔
+        let timeInterval:TimeInterval = endDate.timeIntervalSince(startDate)
+        
+        if timer == nil {
+            //剩余时间
+            var timeout = timeInterval
+            if timeout != 0 {
+                
+                //创建全局队列
+                let queue = DispatchQueue.global()
+                //在全局队列下创建一个时间源
+                timer = DispatchSource.makeTimerSource(flags: [], queue: queue)
+                //设定循环的间隔是一秒,并且立即开始
+                timer?.scheduleRepeating(wallDeadline: DispatchWallTime.now(), interval: .seconds(1))
+                //时间源出发事件
+                timer?.setEventHandler(handler: {
+                    //必须是当前日期往后的日期,在datePicker上也做了限制
+                    if timeout <= 0 {
+                        self.timer?.cancel()
+                        self.timer = nil
+                        DispatchQueue.main.async(execute: {
+                            self.day.text = "00"
+                            self.hour.text = "00"
+                            self.minute.text = "00"
+                            self.second.text = "00"
+                        })
+                    } else {
+                        //计算剩余时间
+                        let days = Int(timeout) / (3600 * 24)
+                        if days == 0 {
+                            self.day.text = ""
+                        }
+                        let hours = (Int(timeout) - Int(days) * 24 * 3600) / 3600
+                        let minutes = (Int(timeout) - Int(days) * 24 * 3600 - Int(hours) * 3600) / 60
+                        let seconds = Int(timeout) - Int(days) * 24 * 3600 - Int(hours) * 3600 - Int(minutes) * 60
+                        //主队列中刷新UI
+                        DispatchQueue.main.async(execute: {
+                            if days == 0 {
+                                self.day.text = "0"
+                            } else {
+                                self.day.text = "\(days)"
+                            }
+                            if hours < 10 {
+                                self.hour.text = "0" + "\(hours)"
+                            } else {
+                                self.hour.text = "\(hours)"
+                            }
+                            if minutes < 10 {
+                                self.minute.text = "0" + "\(minutes)"
+                            } else {
+                                self.minute.text = "\(minutes)"
+                            }
+                            if seconds < 10 {
+                                self.second.text = "0" + "\(seconds)"
+                            } else {
+                                self.second.text = "\(seconds)"
+                            }
+                        })
+                        timeout -= 1
+                    }
+                })
+                //启动时间源
+                timer?.resume()
+            }
+        }
     }
 }
-
-
