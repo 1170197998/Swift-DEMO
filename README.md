@@ -6,8 +6,8 @@
 
 # 
 
-##transitioningAnimation:
-![效果图](http://img.blog.csdn.net/20160427115337115)
+##transitioningAnimation:专转场动画
+![效果图](http://g.recordit.co/UM6C9O2pfb.gif)
 
 # 
 
@@ -21,8 +21,8 @@
 
 # 
 
-##FoldTableView,类似QQ课折叠可展开的效果
-##![效果图](http://g.recordit.co/MJhL9Lv71j.gif)
+##FoldTableView,类似QQ可折叠可展开的效果
+##![效果图](http://g.recordit.co/nNN9tKsC5i.gif)
 
 # 
 
@@ -33,3 +33,13 @@
 
 ##Touch ID指纹解锁
 ##![效果图](http://g.recordit.co/zkisGNY6Tz.gif)
+
+# 
+
+##AlipayScanQRCode 仿支付宝二维码扫描效果
+##![效果图](http://g.recordit.co/vVSYycCDMd.gif)
+
+# 
+
+##Dial Swift3.0拨打电话,获取通话状态(接通,挂断...)
+##![效果图](http://g.recordit.co/ouSVUY3RhK.gif)
