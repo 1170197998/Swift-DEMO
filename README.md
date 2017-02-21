@@ -47,4 +47,4 @@
 # 
 
 ##CoundDown  Swift3.0 GCD定时器 / UIDatePicker的使用, 仿写一个活动剩余时倒计时的DEMO
-##![效果图](http://img.blog.csdn.net/20170221211846714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZmVuZzJxaW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+##![效果图](http://g.recordit.co/S7vTxvpsU1.gif)
