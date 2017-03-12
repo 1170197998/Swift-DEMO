@@ -36,6 +36,11 @@ class ViewController: UIViewController {
         addNotifications()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
+    }
+    
     /// 添加通知
     private func addNotifications() {
         // 检测设备方向
