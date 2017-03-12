@@ -48,3 +48,8 @@
 
 ##CoundDown  Swift3.0 GCD定时器 / UIDatePicker的使用, 仿写一个活动剩余时倒计时的DEMO
 ##![效果图](http://g.recordit.co/S7vTxvpsU1.gif)
+
+# 
+
+##ScreenRotation  视频播放横竖屏切换效果(视图切换+状态栏切换)
+##![效果图](http://recordit.co/KMEcyRV0y4)
