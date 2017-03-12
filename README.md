@@ -52,4 +52,4 @@
 # 
 
 ##ScreenRotation  视频播放横竖屏切换效果(视图切换+状态栏切换)
-##![效果图](http://recordit.co/KMEcyRV0y4)
+##![效果图](http://g.recordit.co/KMEcyRV0y4.gif)
