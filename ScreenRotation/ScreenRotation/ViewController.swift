@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         view.addSubview(label)
         
         label.snp.makeConstraints({ (make) in
-            make.top.equalTo(20)
+            make.top.equalTo(0)
             make.leading.trailing.equalTo(0)
             make.height.equalTo(label.snp.width).multipliedBy(9.0 / 16.0)
         })
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         // 检测状态栏方向
-        NotificationCenter.default.addObserver(self, selector: #selector(statusBarOrientationChange), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(statusBarOrientationChange), name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation, object: nil)
     }
     
     /// 设备方向改变
@@ -77,17 +77,17 @@ class ViewController: UIViewController {
     }
     
     /// 状态栏方向改变
-    @objc fileprivate func statusBarOrientationChange() {
-        //获取当前状态栏方向
-        let currentOrientation = UIApplication.shared.statusBarOrientation
-        if currentOrientation == UIInterfaceOrientation.portrait {
-            toOrientation(orientation: UIInterfaceOrientation.portrait)
-        } else if currentOrientation == UIInterfaceOrientation.landscapeRight{
-            toOrientation(orientation: UIInterfaceOrientation.landscapeRight)
-        } else if currentOrientation == UIInterfaceOrientation.landscapeLeft {
-            toOrientation(orientation: UIInterfaceOrientation.landscapeLeft)
-        }
-    }
+//    @objc fileprivate func statusBarOrientationChange() {
+//        //获取当前状态栏方向
+//        let currentOrientation = UIApplication.shared.statusBarOrientation
+//        if currentOrientation == UIInterfaceOrientation.portrait {
+//            toOrientation(orientation: UIInterfaceOrientation.portrait)
+//        } else if currentOrientation == UIInterfaceOrientation.landscapeRight{
+//            toOrientation(orientation: UIInterfaceOrientation.landscapeRight)
+//        } else if currentOrientation == UIInterfaceOrientation.landscapeLeft {
+//            toOrientation(orientation: UIInterfaceOrientation.landscapeLeft)
+//        }
+//    }
 
     /// 旋转
     ///
