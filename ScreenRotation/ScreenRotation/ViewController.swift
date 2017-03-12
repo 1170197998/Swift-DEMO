@@ -64,13 +64,13 @@ class ViewController: UIViewController {
         case UIInterfaceOrientation.portraitUpsideDown: break
         //屏幕竖直,home键在下面
         case UIInterfaceOrientation.portrait:
-                toOrientation(orientation: UIInterfaceOrientation.portrait); break
+            toOrientation(orientation: UIInterfaceOrientation.portrait); break
         //屏幕水平,home键在左
         case UIInterfaceOrientation.landscapeLeft:
             toOrientation(orientation: UIInterfaceOrientation.landscapeLeft); break
         //屏幕水平,home键在右
         case UIInterfaceOrientation.landscapeRight:
-                toOrientation(orientation: UIInterfaceOrientation.landscapeRight); break
+            toOrientation(orientation: UIInterfaceOrientation.landscapeRight); break
         default:
             break
         }
@@ -104,7 +104,6 @@ class ViewController: UIViewController {
         if orientation != UIInterfaceOrientation.portrait {
             // 从全屏的一侧直接到全屏的另一侧不修改
             if currentOrientation == UIInterfaceOrientation.portrait {
-                label.removeFromSuperview()
                 label.snp.makeConstraints({ (make) in
                     make.width.equalTo(UIScreen.main.bounds.size.height)
                     make.height.equalTo(UIScreen.main.bounds.size.width)
