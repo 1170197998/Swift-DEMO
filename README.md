@@ -53,3 +53,8 @@
 
 ##ScreenRotation  视频播放横竖屏切换效果(视图切换+状态栏切换)
 ##![效果图](http://g.recordit.co/KMEcyRV0y4.gif)
+
+# 
+
+##FMDE_DEMO  基于Swift使用FMDB实现(增删改查+搜索+聊天置顶实现)
+##![效果图](http://img.blog.csdn.net/20170404223230190?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZmVuZzJxaW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
