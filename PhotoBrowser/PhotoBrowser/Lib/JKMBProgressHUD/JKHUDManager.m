@@ -6,6 +6,7 @@
 //  Copyright © 2016年 溪枫狼. All rights reserved.
 //
 
+
 #import "JKHUDManager.h"
 #import "MBProgressHUD.h"
 #import "UIWindow+Extension.h"
@@ -89,9 +90,9 @@
     
     self.HUD.mode = MBProgressHUDModeText;
     [view addSubview:self.HUD];
-    self.HUD.detailsLabelText = text;
-    self.HUD.labelText = nil;
-    [self.HUD show:YES];
+    self.HUD.detailsLabel.text = text;
+    self.HUD.label.text = nil;
+    [self.HUD showAnimated:YES];
     [self jk_excuteDelayTask:1.5 inMainQueue:^{
         [self hideHUDAnimated:NO];
         if (dismissAction) {

@@ -1,4 +1,5 @@
 use_frameworks!
 target ‘PhotoBrowser’ do
 	pod ‘SDWebImage’
+    pod 'MBProgressHUD'
 end
