@@ -19,8 +19,6 @@ class ViewController: UIViewController {
         let margin = 10
         let width = (JK_ScreenWidth() - 40) / 3
         
-        var mArray = Array<Any>()
-        
         for index in 1..<10 {
             let imageName = "img\(index).jpg"
             let image = UIImage(named: imageName)
@@ -33,9 +31,29 @@ class ViewController: UIViewController {
             view.addSubview(imageView)
             
             let model = JKPhotoModel(imageView: imageView, smallPicUrl: imageName, cell: nil, contentView: view)
-            mArray.append(model!)
+            mArrayImages.append(model!)
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tapImage))
+            imageView.isUserInteractionEnabled = true
+            imageView.addGestureRecognizer(tap)
+            imageView.tag = index
         }
-        mArrayImages = mArray
+    }
+    
+    @objc private func tapImage(tap: UITapGestureRecognizer) {
+        let imageView = tap.view
+        JKPhotoBrowser().jk_itemArray = mArrayImages as! [JKPhotoModel]
+        JKPhotoBrowser().jk_currentIndex = (imageView?.tag)! - 1
+        JKPhotoBrowser().jk_showPageController = true
+        JKPhotoManager.shared().jk_showPhotoBrowser()
+        JKPhotoBrowser().jk_delegate = self
+        JKPhotoBrowser().jk_QRCodeRecognizerEnable = true
+    }
+}
+
+extension ViewController: JKPhotoManagerDelegate {
+    func jk_handleQRCodeRecognitionResult(_ QRCodeContent: String) {
+        JKPhotoBrowser().jk_hidesPhotoBrowserWhenPushed()
     }
 }
 

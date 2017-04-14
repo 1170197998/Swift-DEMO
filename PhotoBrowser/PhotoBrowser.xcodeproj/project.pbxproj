@@ -21,6 +21,7 @@
 		9A48CFC11EA06C5C002A4E87 /* JKPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48CFB51EA06C5C002A4E87 /* JKPhotoCollectionViewCell.m */; };
 		9A48CFC21EA06C5C002A4E87 /* JKPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48CFB71EA06C5C002A4E87 /* JKPhotoManager.m */; };
 		9A48CFC31EA06C5C002A4E87 /* JKPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48CFB91EA06C5C002A4E87 /* JKPhotoModel.m */; };
+		9A48D0591EA09DB4002A4E87 /* JKImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A48D0581EA09DB4002A4E87 /* JKImageModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		9A48CFB81EA06C5C002A4E87 /* JKPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPhotoModel.h; sourceTree = "<group>"; };
 		9A48CFB91EA06C5C002A4E87 /* JKPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPhotoModel.m; sourceTree = "<group>"; };
 		9A48CFC41EA06D17002A4E87 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		9A48D0571EA09DB4002A4E87 /* JKImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageModel.h; sourceTree = "<group>"; };
+		9A48D0581EA09DB4002A4E87 /* JKImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKImageModel.m; sourceTree = "<group>"; };
 		B9D9A0F5213A6ECA787969E6 /* Pods-PhotoBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoBrowser/Pods-PhotoBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +143,8 @@
 		9A48CFAD1EA06C5C002A4E87 /* JKPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				9A48D0571EA09DB4002A4E87 /* JKImageModel.h */,
+				9A48D0581EA09DB4002A4E87 /* JKImageModel.m */,
 				9A48CFAE1EA06C5C002A4E87 /* JKActionSheet */,
 				9A48CFB31EA06C5C002A4E87 /* JKPhotoBrowser.h */,
 				9A48CFB41EA06C5C002A4E87 /* JKPhotoCollectionViewCell.h */,
@@ -297,6 +302,7 @@
 			files = (
 				9A48CF921EA06AEC002A4E87 /* ViewController.swift in Sources */,
 				9A48CFBE1EA06C5C002A4E87 /* UIWindow+Extension.m in Sources */,
+				9A48D0591EA09DB4002A4E87 /* JKImageModel.m in Sources */,
 				9A48CFC01EA06C5C002A4E87 /* JKActionSheetCell.m in Sources */,
 				9A48CFC21EA06C5C002A4E87 /* JKPhotoManager.m in Sources */,
 				9A48CFBA1EA06C5C002A4E87 /* JKHUDManager.m in Sources */,

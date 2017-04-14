@@ -13,6 +13,7 @@
 #import "JKPhotoModel.h"
 #import "JKPhotoManager.h"
 #import "JKActionSheet.h"
+#import "JKImageModel.h"
 
 
 #endif /* JKPhotoBrowser_h */
