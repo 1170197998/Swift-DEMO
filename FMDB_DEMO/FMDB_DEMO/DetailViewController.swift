@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UITableViewController {
 
+    var page: Int = 1
     var dataArray = Array<DetailModel>()
     var searchArray = Array<DetailModel>()
     
@@ -26,20 +27,20 @@ class DetailViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
         DetailDAO.shareDAO.creatTable()
-        
-        dataArray = DetailDAO.shareDAO.getDataList() as! Array<DetailModel>
-        if dataArray.count == 0 {
-            makeData()
-            dataArray = DetailDAO.shareDAO.getDataList() as! Array<DetailModel>
-        }
+        makeData()
+
+        //全量加载
+        // dataArray = DetailDAO.shareDAO.getDataList() as! Array<DetailModel>
+        // 分页加载
+        dataArray = DetailDAO.shareDAO.pageReadDataListWith(page: page) as! Array<DetailModel>
         
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
     }
     
-    private func makeData(){
-        for i in 9..<1000 {
+    private func makeData() {
+        for i in 0..<1000 {
             let model = DetailModel()
             model.desId = i
             model.des = i % 3 == 0 ? "Java---\(i)" : i % 3 == 1 ? "Objective_C---\(i)" : "Swift---\(i)"
@@ -61,6 +62,16 @@ extension DetailViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return isSearching ? searchArray.count : dataArray.count
+    }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y == scrollView.contentSize.height - scrollView.frame.height {
+            print("滑动到底部加载多")
+            page += 1
+            let array = DetailDAO.shareDAO.pageReadDataListWith(page: page) as! Array<DetailModel>
+            dataArray.append(contentsOf: array) //数组拼接数组
+            tableView.reloadData()
+        }
     }
 }
 

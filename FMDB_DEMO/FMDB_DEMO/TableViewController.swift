@@ -27,7 +27,6 @@ class TableViewController: UITableViewController {
             ListDAO.shareDAO.insertData(model: model)
         }
         dataArray = ListDAO.shareDAO.getDataList() 
-        self.tableView.reloadData()
     }
     
     @IBAction func creatTable(_ sender: Any) {
@@ -36,6 +35,7 @@ class TableViewController: UITableViewController {
         if dataArray.count == 0 {
             makeData()
         }
+        self.tableView.reloadData()
     }
     
     @IBAction func dropTable(_ sender: Any) {
