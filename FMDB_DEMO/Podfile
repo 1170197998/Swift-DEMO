@@ -1,4 +1,0 @@
-use_frameworks!
-target ‘FMDB_DEMO’ do
-	pod ‘FMDB’
-end
