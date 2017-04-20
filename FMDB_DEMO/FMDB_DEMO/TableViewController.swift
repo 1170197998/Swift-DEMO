@@ -32,10 +32,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func creatTable(_ sender: Any) {
         ListDAO.shareDAO.creatTable()
-        dataArray = ListDAO.shareDAO.getDataList()
-        if dataArray.count == 0 {
-            makeData()
-        }
+        makeData()
     }
     
     @IBAction func dropTable(_ sender: Any) {

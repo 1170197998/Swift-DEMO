@@ -15,7 +15,7 @@ class ListDAO: NSObject {
     
     /// 创建表
     func creatTable() {
-        let sqlString = "CREATE TABLE IF NOT EXISTS TABLE_LIST('personId' Integer, 'name' Text, 'isTop' Integer)"  //字段的单引号可有可没有
+        let sqlString = "CREATE TABLE IF NOT EXISTS TABLE_LIST('personId' Integer PRIMARY KEY NOT NULL, 'name' Text, 'isTop' Integer)"  //字段的单引号可有可没有
         DBManager.shareManager.dbQueue?.inDatabase({ (db) in
             guard (db?.executeUpdate(sqlString, withArgumentsIn: [])) != nil else {
                 return
