@@ -6,7 +6,7 @@
 
 # 
 
-## transitioningAnimation:专转场动画
+## transitioningAnimation:转场动画
 ## ![效果图](http://g.recordit.co/UM6C9O2pfb.gif)
 
 # 
