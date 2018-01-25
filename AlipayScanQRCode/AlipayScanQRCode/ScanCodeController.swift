@@ -42,7 +42,9 @@ class ScanCodeController: UIViewController {
     fileprivate func setupMaskView() {
         let maskView = UIView(frame: CGRect(x: -(view.bounds.height - view.bounds.width) / 2, y: 0, width: view.bounds.height, height: view.bounds.height))
         maskView.layer.borderWidth = (view.bounds.height - scanViewW) / 2
-        maskView.layer.borderColor = UIColor.init(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.6).cgColor
+    
+        maskView.layer.borderColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
+    
         view.addSubview(maskView)
     }
     
@@ -79,29 +81,29 @@ class ScanCodeController: UIViewController {
     fileprivate func scaning() {
         
         //获取摄像设备
-        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        let device = AVCaptureDevice.default(for: AVMediaType.video)
         do {
             //创建输入流
-            let input = try AVCaptureDeviceInput.init(device: device)
+            let input = try AVCaptureDeviceInput.init(device: device!)
             //创建输出流
             let output = AVCaptureMetadataOutput()
             output.rectOfInterest = CGRect(x: 0.1, y: 0, width: 0.9, height: 1)
             //设置代理,在主线程刷新
             output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             //初始化链接对象 / 高质量采集率
-            session.canSetSessionPreset(AVCaptureSessionPresetHigh)
+            session.canSetSessionPreset(AVCaptureSession.Preset.high)
             session.addInput(input)
             session.addOutput(output)
 
             //在上面三行之后写下面代码,不然报错如下:Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[AVCaptureMetadataOutput setMetadataObjectTypes:] Unsupported type found - use -availableMetadataObjectTypes'
             //http://stackoverflow.com/questions/31063846/avcapturemetadataoutput-setmetadataobjecttypes-unsupported-type-found
             //设置扫码支持的编码格式
-            output.metadataObjectTypes = [AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code]
+            output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr,AVMetadataObject.ObjectType.ean13,AVMetadataObject.ObjectType.ean8, AVMetadataObject.ObjectType.code128]
             
             let layer = AVCaptureVideoPreviewLayer(session: session)
-            layer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-            layer?.frame = view.layer.bounds
-            view.layer.insertSublayer(layer!, at: 0)
+            layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            layer.frame = view.layer.bounds
+            view.layer.insertSublayer(layer, at: 0)
             //开始捕捉
             session.startRunning()
             
@@ -142,7 +144,7 @@ class ScanCodeController: UIViewController {
 }
 
 extension ScanCodeController:AVCaptureMetadataOutputObjectsDelegate {
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    func metadataOutput(_ captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         if metadataObjects.count > 0 {
             session.stopRunning()

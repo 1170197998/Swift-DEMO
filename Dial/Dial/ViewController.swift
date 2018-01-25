@@ -9,6 +9,7 @@
 import UIKit
 import CoreTelephony
 import CallKit.CXCallObserver
+
 enum CurrentState {
     case HasConnected //接通
     case HasEnded     //挂断
@@ -17,7 +18,7 @@ enum CurrentState {
 class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
-    let callCenter = CTCallCenter()
+//    let callCenter = CTCallCenter()
     let callObserver = CXCallObserver()
     
     override func viewDidLoad() {
@@ -33,22 +34,22 @@ class ViewController: UIViewController {
     }
     
     //iOS10之前
-    fileprivate func old() {
-        callCenter.callEventHandler =  { (call: CTCall) -> Void in
-            if call.callState == CTCallStateDisconnected {
-                print("电话挂断")
-            }
-            if call.callState == CTCallStateConnected {
-                print("电话接通")
-            }
-            if call.callState == CTCallStateIncoming {
-                print("电话被中断")
-            }
-            if call.callState == CTCallStateDialing {
-                print("电话播出")
-            }
-        }
-    }
+//    fileprivate func old() {
+//        callCenter.callEventHandler =  { (call: CTCall) -> Void in
+//            if call.callState == CTCallStateDisconnected {
+//                print("电话挂断")
+//            }
+//            if call.callState == CTCallStateConnected {
+//                print("电话接通")
+//            }
+//            if call.callState == CTCallStateIncoming {
+//                print("电话被中断")
+//            }
+//            if call.callState == CTCallStateDialing {
+//                print("电话播出")
+//            }
+//        }
+//    }
 
     @IBAction func call(_ sender: Any) {
         callPhone()
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
     
     //拨号
     fileprivate func callPhone() {
-        if let number = textField.text?.characters.count != 0 ? textField.text : textField.placeholder{
+        if let number = textField.text?.count != 0 ? textField.text : textField.placeholder{
             let callWebView = UIWebView()
             callWebView.loadRequest(URLRequest(url:URL(string: "tel:\(number)")!))
             view.addSubview(callWebView)

@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                 //在全局队列下创建一个时间源
                 timer = DispatchSource.makeTimerSource(flags: [], queue: queue)
                 //设定循环的间隔是一秒,并且立即开始
-                timer?.scheduleRepeating(wallDeadline: DispatchWallTime.now(), interval: .seconds(1))
+                timer?.schedule(wallDeadline: DispatchWallTime.now(), repeating: .seconds(1))
                 //时间源出发事件
                 timer?.setEventHandler(handler: {
                     //必须是当前日期往后的日期,在datePicker上也做了限制

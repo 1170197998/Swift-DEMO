@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var mArray:Array = [6,5,8,1,9,8,5,6,9,5,2]
+        var mArray:Array = [6,5,8,1,9,8,0,6,9,7,2]
         let sort = Sort()
         print("排序前\(mArray)")
         

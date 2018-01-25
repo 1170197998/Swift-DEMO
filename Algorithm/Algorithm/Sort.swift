@@ -137,12 +137,11 @@ class Sort: NSObject {
                     left = middle + 1
                 }
             }
-            
             //有错~
-            for j in (left + 1...i).reversed() {
-                mArray[j] = mArray[j - 1]
-            }
-            mArray[left] = temp
+//            for j in (left + 1..<i).reversed() {
+//                mArray[j] = mArray[j - 1]
+//            }
+//            mArray[left] = temp
         }
     }
     
