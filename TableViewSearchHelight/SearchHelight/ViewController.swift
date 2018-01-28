@@ -55,8 +55,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate
             let originResult = dataResult[indexPath.row] as NSString
             let range = originResult.range(of: searchController.searchBar.text!)
             let attributeString = NSMutableAttributedString(string: originResult as String )
-            attributeString.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 18), range: range)
-            attributeString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: range)
+            attributeString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 18), range: range)
+            attributeString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: range)
             cell.textLabel?.attributedText = attributeString
             cell.textLabel?.text = dataResult[indexPath.row]
         } else {

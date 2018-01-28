@@ -31,7 +31,7 @@ class ViewController: UITableViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func dataSource(_ non: Notification) {
+    @objc func dataSource(_ non: Notification) {
         array = [non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!,non.userInfo!["key"]!]
 //        print(array)
 //        print(array.count)
@@ -59,13 +59,13 @@ class ViewController: UITableViewController {
         return cell!
     }
     
-    func change() {
+    @objc func change() {
         
         let titleButton = navigationItem.titleView as! TitleButton
         titleButton.isSelected = !titleButton.isSelected
     }
     
-    func clickButton() {
+    @objc func clickButton() {
         
         //弹出菜单
         let viewController = PopoverTableViewController()

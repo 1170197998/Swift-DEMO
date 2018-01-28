@@ -57,7 +57,7 @@ class PopoverPresentAtionController: UIPresentationController {
         return view
     }()
     
-    func close() {
+    @objc func close() {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
 }

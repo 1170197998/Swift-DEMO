@@ -1,4 +1,4 @@
 use_frameworks!
 target 'ScreenRotation' do
-    pod 'SnapKit'
+    pod 'SnapKit', '~> 4.0.0'
 end

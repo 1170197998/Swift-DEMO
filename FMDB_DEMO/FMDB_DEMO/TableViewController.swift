@@ -46,7 +46,7 @@ extension TableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = dataArray[indexPath.row] 
         var cell = tableView.dequeueReusableCell(withIdentifier: "ID");
-        if !(cell != nil)  {
+        if (nil == cell)  {
             cell = UITableViewCell(style: .default, reuseIdentifier: "ID")
         }
         cell?.textLabel?.text = "\(model.name) + isTop: \(model.isTop)"

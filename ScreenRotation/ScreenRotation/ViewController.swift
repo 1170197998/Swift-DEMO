@@ -126,9 +126,9 @@ class ViewController: UIViewController {
         if interfaceOrientation == UIInterfaceOrientation.portrait {
             return CGAffineTransform.identity
         } else if interfaceOrientation == UIInterfaceOrientation.landscapeLeft {
-            return CGAffineTransform(rotationAngle: (CGFloat)(-M_PI_2))
+            return CGAffineTransform(rotationAngle: (CGFloat)(-Double.pi / 2))
         } else if (interfaceOrientation == UIInterfaceOrientation.landscapeRight) {
-            return CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+            return CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
         }
         return CGAffineTransform.identity
     }

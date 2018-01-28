@@ -20,7 +20,7 @@ class PopoverTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrayList = ["1","2","3","4","5","6","7"]
+        arrayList = ["0","1","2","3","4","5","6"]
     }
     
     // MARK: - Table view data source

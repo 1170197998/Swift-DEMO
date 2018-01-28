@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 //        var array = [SectionModel]()
 //        for i in 0..<20 {
 //            let sectionModel = SectionModel()
-//            sectionModel.isExpanded = false
+    //            secvarnModel.isExpanded = false
 //            sectionModel.sectionTitle = "第" + String(i + 1) + "组"
 //            var cellModels = [CellModel]()
 //            
@@ -91,6 +91,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
     }
 }
 

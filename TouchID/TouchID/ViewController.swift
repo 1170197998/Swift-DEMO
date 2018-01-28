@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                      #define kLAErrorInvalidContext                     无效的上下文环境
                      */
                     
-                    let error: NSError = error as! NSError
+                    let error: NSError = error! as NSError
                     if error.code == Int(kLAErrorAuthenticationFailed) {
                         print("授权失败,三次输入错误")
                     } else if (error.code == Int(kLAErrorUserCancel)) {
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
                 }
             })
         } else {
-            print("不支持" + "\(error)")
+            print("不支持" + "\(String(describing: error))")
         }
     }
 }
