@@ -1,6 +1,6 @@
 ## 博客地址:http://blog.csdn.net/feng2qing
 
-# DEMO截图,会一直更新...
+# DEMO截图,持续更新...
 ## SFLinkageTableView:
 ## ![Mou icon](http://g.recordit.co/XEfnC2Bp62.gif)
 
